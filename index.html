@@ -1,123 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FE Choices</title>
-    <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FE Choices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="header">
-        <img src="/img/menu.svg" alt="menu hamburguer" class="menu">
-        <a href="#index.html" class="logo"><img src="/img/logo.svg" alt="logo"></a>
-
-        <div class="container-header">
-            <div class="pages">
-                <a href="#palpites.html">Palpites</a>
-                <a href="#fantasy.html">Fantasy</a>
-                <a href="#roleta.html">Roleta</a>
-            </div>
-
-            <div class="login">
-                <a href="#login.html" class="entrar">Entrar</a>
-                <a href="#registro.html" class="cadastro">Cadastre-se</a>
-            </div>
-        </div>
+  <header class="header">
+    <div class="header-logo-menu">
+      <img id="menu" class="menu" src="./imgs/icons/menu.svg" alt="menu hamburguer" onclick="clickMenu()">
+      <a class="logo" href="./index.html" ><img src="./imgs/logo.svg" alt="FE Choices"></a>
     </div>
-    <aside>
-        <div class="container-aside">
+    <div class="header-nav">
+      <div class="header-pages">
+        <a href="./palpites.html">Palpites</a>
+        <a href="./fantasy.html">Fantasy</a>
+        <a href="./roleta.html">Roleta</a>
+      </div>
+      <div class="header-login">
+        <a href="./login.html">Entrar</a>
+        <a href="./cadastro.html">Cadastre-se</a>
+      </div>
+    </div>
+  </header>
 
-            <a href="#" class="pontos-aside">
-                <p>Ganhe 20</p>
-                <div class="img-pontos-aside">
-                    <img src="/img/pontos/Vector (1).svg" alt="" class="pontos-img">
-                </div>
-            </a>
+  <aside class="aside" id="aside">
+    <a class="link-obter" href="./index.html">Ganhe 20</a>
+    <nav>
+      <p>Populares</p>
+      <ul>
+        <li><a href="./palpites.html">Palpites</a></li>
+        <li><a href="./roleta.html">Roleta</a></li>
+        <li><a href="./fantasy.html">Fantasy</a></li>
+        <li><a href="./aovivo.html">Ao Vivo</a></li>
+        <li><a href="./circuitos.html">Circuitos</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li><a href="./sobre.html">Sobre Nós</a></li>
+        <li><a href="./afiliados.html">Afiliados</a></li>
+        <li><a href="./premios.html">Prêmios</a></li>
+        <li><a href="./suporte.html">Suporte</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-            <div class="populares-aside">
-                <div class="titulo-aside">
-                    <h3 class="populares-txt">Populares</h3>
-                    <img src="/img/seta.svg" alt="" class="seta-populares">
-                </div>
-            
-                <div class="paginas-aside">
-                    <div class="palpites-aside">
-                        <a href="#palpites.html" class="button-aside">
-                            <img src="/img/simbolos/palpites.svg" alt="Palpites">
-                            <p>Palpites</p>
-                        </a>
-                    </div>
+  <main class="main container">
 
-                    <div class="roleta-aside">
-                        <a href="#roleta.html" class="button-aside">
-                            <img src="/img/simbolos/roleta.svg" alt="Roleta">
-                            <p>Roleta</p>
-                        </a>
-                    </div>
-
-                    <div class="fantasy-aside">
-                        <a href="#fantasy.html" class="button-aside">
-                            <img src="/img/simbolos/fantasy.svg" alt="Fantasy">
-                            <p>Fantasy</p>
-                        </a>
-                    </div>
-
-                    <div class="aovivo-aside">
-                        <a href="#aovivo.html" class="button-aside">
-                            <img src="/img/simbolos/aovivo.svg" alt="Ao Vivo">
-                            <p>Ao vivo</p>
-                        </a>
-                    </div>
-
-                    <div class="circuitos-aside">
-                        <a href="#circuitos.html" class="button-aside">
-                            <img src="/img/simbolos/circuitos.svg" alt="Circuitos">
-                            <p>Circuitos</p>
-                        </a>
-                    </div>
-                </div>
-            
-
-
-                <div class="funcionalidades-aside">
-                    <div class="sobre-aside">
-                            <a href="#sobre.html" class="button-aside">
-                                <img src="/img/simbolos/sobre.svg" alt="Sobre">
-                                <p>Sobre nós</p>
-                            </a>
-                        </div>
-
-                        <div class="afiliados-aside">
-                            <a href="#afiliados.html" class="button-aside">
-                                <img src="/img/simbolos/afiliados.svg" alt="Afiliados">
-                                <p>Roleta</p>
-                            </a>
-                        </div>
-
-                        <div class="premios-aside">
-                            <a href="#premios.html" class="button-aside">
-                                <img src="/img/simbolos/premios.svg" alt="Prêmios">
-                                <p>Prêmios</p>
-                            </a>
-                        </div>
-
-                        <div class="suporte-aside">
-                            <a href="#suporte.html" class="button-aside">
-                                <img src="/img/simbolos/suporte.svg" alt="Suporte">
-                                <p>Suporte</p>
-                            </a>
-                        </div>
-
-                        <div class="blog-aside">
-                            <a href="#blog.html" class="button-aside">
-                                <img src="/img/simbolos/blog.svg" alt="Blog">
-                                <p>Blog</p>
-                            </a>
-                        </div>
-                </div>
-            </div>
+    <div class="cadastro bg-card">
+      <div class="cadastro-conteudo card-conteudo">
+        <h2>Bem vindo ao FE Choices</h2>
+        <p>Cadastre-se e receba bônus de até 800 pontos</p>
+        <div class="cadastro-btn">
+          <a class="card-btn" href="./cadastro">cadastre-se</a>
+          <a href="./cadastro"><img src="./imgs/icons/google.svg" alt="google"></a>
         </div>
-    </aside>
-    <main><h1>sasasasasa</h1></main>
+        <p class="breadcrumb">
+          <span>Cadastre-se</span>
+          <span>Palpite</span>
+          <span>Ganhe Pontos</span>
+        </p>
+      </div>
+      <div class="cadastro-img">
+        <img src="./imgs/ilustracoes/bem-vindo.svg" alt="Dois homens com um carro esportivo">
+      </div>
+    </div>
+
+    <div class="ganhar-pontos bg-card">
+      <div class="ganhar-pontos-conteudo card-conteudo">
+        <h2>Ganhe mais pontos!</h2>
+        <p>Chame seus amigos através do seu link e ganhe mais pontos</p>
+        <a class="card-btn" href="./afiliados">Saiba Mais</a>
+      </div>
+      <div class="ganhar-pontos-img">
+        <img src="./imgs/ilustracoes/ganhe-pontos.svg" alt="Três pessoas sentadas com café na mão.">
+      </div>
+    </div>
+
+    <div class="resgate-premios bg-card">
+      <div class="resgate-premios-conteudo card-conteudo">
+        <h2>Resgate prêmios!</h2>
+        <p>De seus palpites, ganhe pontos e troque seus pontos por prêmios</p>
+        <a class="card-btn" href="./premios">Veja os prêmios</a>
+      </div>
+      <div class="ganhar-pontos-img">
+        <img src="./imgs/ilustracoes/resgate-premios.svg" alt="Pessoa em pé do lado de um pacote de presente">
+      </div>
+    </div>
+
+  </main>
+  <script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,462 @@
+:root {
+  --cor-12: #01080E;
+  --cor-11: #030B14;
+  --cor-10: #081122;
+  --cor-9: #123;
+  --cor-8: #15293D;
+  --cor-7: #22374D;
+  --cor-6: #30455A;
+  --cor-5: #596E84;
+  --cor-4: #7B8EA3;
+  --cor-3: #9AAABB;
+  --cor-2: #C4CED9;
+  --cor-1: #EFF1F3;
+  --cor-w: #fff;
+  --cor-p5: #005;
+  --cor-p4: #159;
+  --cor-p3: #47B;
+  --cor-p2: #69D;
+  --cor-p1: #9CF;
+  --cor-separador: #345;
+  --fonte-primaria: 'Poppins', sans-serif;
+  --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--fonte-secundaria);
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: inline-block;
+}
+
+body {
+  background: var(--cor-9);
+}
+
+/*************************************** GLOBAL ***************************************/
+
+.container {
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin-left: 366px;
+  margin-right: 40px;
+}
+
+.bg-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(0.25turn, #30455A, #596E84);
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.card-conteudo {
+  h2 {
+    color: var(--cor-w);
+    font: 600 2rem/1.66 var(--fonte-primaria);
+  }
+  p {
+    color: var(--cor-1);
+    font: 400 1.125rem/1.33 var(--fonte-secundaria);
+  }
+}
+
+.card-btn {
+  background: var(--cor-p3);
+  color: var(--cor-w);
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+/*************************************** HEADER ***************************************/
+
+.header {
+  width: 100%;
+  height: 100px;
+  padding: 0px 40px;
+  background: var(--cor-9);
+  border-bottom: 4px solid var(--cor-separador);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 220px;
+  position: fixed;
+  z-index: 2;
+}
+
+.header-logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .menu {
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+  }
+  .logo {
+    width: 66px;
+  }
+}
+
+.header-nav {
+  max-width: 1400px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-pages {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-pages a {
+  color: var(--cor-w);
+}
+
+.header-pages a:hover {
+  color: var(--cor-2);
+}
+
+.header-login {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-login a {
+  color: var(--cor-w);
+}
+
+.header-login a:hover {
+  color: var(--cor-2);
+}
+
+.header-login a:nth-child(2) {
+  background: var(--cor-w);
+  border: 1px solid var(--cor-w);
+  color: var(--cor-12);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: var(--fonte-primaria);
+  font-weight: 600;
+  transition: .3s;
+}
+
+.header-login a:nth-child(2):hover {
+  background: var(--cor-9);
+  color: var(--cor-w);
+}
+
+@media (max-width: 1600px) {
+  .header-nav {
+    justify-content: end;
+  }
+  .header-pages {
+    display: none;
+  }
+  .container {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    gap: 50px;
+  }
+  .header-login a:nth-child(2) {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+}
+
+/*************************************** ASIDE ***************************************/
+
+.aside {
+  display: none;
+  background: var(--cor-9);
+  width: fit-content;
+  height: calc(100vh - 100px);
+  padding: 20px 40px;
+  border-right: 4px solid var(--cor-separador);
+  position: fixed;
+  top: 100px;
+  z-index: 2;
+}
+
+.body {
+  height: 300vh;
+}
+
+.link-obter {
+  background: var(--cor-p3);
+  color: var(--cor-w);
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: end;
+  transition: .3s;
+}
+
+.link-obter::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  background: url(../imgs/icons/icon-pontos-b.svg);
+}
+
+.link-obter:hover {
+  background: var(--cor-p4);
+}
+
+.aside nav:nth-child(2) {
+  margin-top: 32px;
+}
+
+.aside nav:nth-child(2)::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--cor-separador);
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.aside nav:nth-child(2) p {
+  width: 100%;
+  color: var(--cor-2);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside nav:nth-child(2) p:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  background: url(../imgs/icons/seta-baixo.svg) no-repeat center center;
+  transition: .3s;
+}
+
+.aside nav:nth-child(2) p:hover::after {
+  transform: rotate(180deg);
+}
+
+.aside nav:nth-child(2) ul li:not(li:last-child) {
+  margin-bottom: 12px;
+}
+
+.aside nav:nth-child(2) ul li a {
+  color: var(--cor-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aside nav:nth-child(2) ul li a::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: no-repeat center center;
+}
+
+.aside nav:nth-child(2) ul li:nth-child(1) a::before {
+  background-image: url(../imgs/icons/icon-palpites.svg) ;
+}
+
+.aside nav:nth-child(2) ul li:nth-child(2) a::before {
+  background-image: url(../imgs/icons/icon-roleta.svg) ;
+}
+
+.aside nav:nth-child(2) ul li:nth-child(3) a::before {
+  background-image: url(../imgs/icons/icon-fantasy.svg) ;
+}
+
+.aside nav:nth-child(2) ul li:nth-child(4) a::before {
+  background-image: url(../imgs/icons/icon-aovivo.svg) ;
+}
+
+.aside nav:nth-child(2) ul li:nth-child(5) a::before {
+  background-image: url(../imgs/icons/icon-circuitos.svg) ;
+}
+
+.aside nav:nth-child(3) ul li:not(li:last-child) {
+  margin-bottom: 12px;
+}
+
+.aside nav:nth-child(3) ul li a {
+  color: var(--cor-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aside nav:nth-child(3) ul li a::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: no-repeat center center;
+}
+
+.aside nav:nth-child(3) ul li:nth-child(1) a::before {
+  background-image: url(../imgs/icons/icon-sobre.svg) ;
+}
+
+.aside nav:nth-child(3) ul li:nth-child(2) a::before {
+  background-image: url(../imgs/icons/icon-afiliados.svg) ;
+}
+
+.aside nav:nth-child(3) ul li:nth-child(3) a::before {
+  background-image: url(../imgs/icons/icon-premios.svg) ;
+}
+
+.aside nav:nth-child(3) ul li:nth-child(4) a::before {
+  background-image: url(../imgs/icons/icon-suporte.svg) ;
+}
+
+.aside nav:nth-child(3) ul li:nth-child(5) a::before {
+  background-image: url(../imgs/icons/icon-blog.svg) ;
+}
+
+/*************************************** MAIN ***************************************/
+
+.main {
+  position: relative;
+  top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 1600px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+} 
+
+/*************************************** CARD CADASTRO ***************************************/
+
+.cadastro {
+  grid-column: 1 / -1;
+}
+
+.cadastro-conteudo {
+  .cadastro-btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.cadastro-btn a:nth-child(2) {
+  border: 2px solid var(--cor-4);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.breadcrumb {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.breadcrumb span {
+  color: var(--cor-1);
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb span:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../imgs/icons/seta-direita.svg) no-repeat center center;
+  margin-left: 16px;
+}
+
+.cadastro-img {
+  img {
+    width: 510px;
+  }
+}
+
+@media (max-width: 1000px) {
+  
+  .cadastro-conteudo {
+    h1 {
+      font: 600 1.5rem/1.66 var(--fonte-primaria);
+    }
+    p {
+      font: 400 1rem/1.33 var(--fonte-secundaria);
+    }
+    .cadastro-btn {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  .cadastro-img {
+    img {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .cadastro-img {
+    display: none;
+  }
+}
+
+/*************************************** CARD GANHAR PONTOS ***************************************/
+
+.ganhar-pontos-conteudo {
+  p {
+    width: 32ch;
+  }
+  a {
+    margin-top: 20px;
+  }
+}
+
+.ganhar-pontos-img img {
+  width: 220px;
+}
+
+/*************************************** CARD RESGATE PREMIOS ***************************************/
+
+.resgate-premios-conteudo {
+  p {
+    width: 32ch;
+  }
+  a {
+    margin-top: 20px;
+  }
+}
