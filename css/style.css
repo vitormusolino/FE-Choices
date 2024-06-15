@@ -83,10 +83,12 @@ body {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
   font-weight: 500;
   transition: .3s;
+  border: 2px solid var(--cor-p3);
 }
 
 .card-btn:hover {
   background: var(--cor-p4);
+  border: 2px solid var(--cor-p4);
 }
 
 /*************************************** HEADER ***************************************/
@@ -167,28 +169,6 @@ body {
 .header-login a:nth-child(2):hover {
   background: var(--cor-9);
   color: var(--cor-w);
-}
-
-@media (max-width: 1600px) {
-  .header-nav {
-    justify-content: end;
-  }
-  .header-pages {
-    display: none;
-  }
-  .container {
-    margin-left: 40px;
-  }
-}
-
-@media (max-width: 520px) {
-  .header {
-    gap: 50px;
-  }
-  .header-login a:nth-child(2) {
-    font-size: 0.875rem;
-    padding: 8px 16px;
-  }
 }
 
 /*************************************** ASIDE ***************************************/
@@ -357,12 +337,6 @@ body {
   gap: 40px;
 }
 
-@media (max-width: 1600px) {
-  .main {
-    grid-template-columns: 1fr;
-  }
-} 
-
 /*************************************** CARD CADASTRO ***************************************/
 
 .cadastro {
@@ -412,42 +386,11 @@ body {
   }
 }
 
-@media (max-width: 1000px) {
-  .aside {
-    display: none;
-  }
-  .cadastro-conteudo {
-    h1 {
-      font: 600 1.5rem/1.66 var(--fonte-primaria);
-    }
-    p {
-      font: 400 1rem/1.33 var(--fonte-secundaria);
-    }
-    .cadastro-btn {
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-  }
-  .cadastro-img {
-    img {
-      width: 400px;
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .cadastro-img {
-    display: none;
-  }
-}
-
 /*************************************** CARD GANHAR PONTOS ***************************************/
 
 .ganhar-pontos-conteudo {
   p {
-    width: 32ch;
+    max-width: 32ch;
   }
   a {
     margin-top: 20px;
@@ -462,7 +405,7 @@ body {
 
 .resgate-premios-conteudo {
   p {
-    width: 32ch;
+    max-width: 32ch;
   }
   a {
     margin-top: 20px;
@@ -476,6 +419,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   grid-column: 1 / -1;
   h2 {
     color: var(--cor-w);
@@ -511,4 +455,182 @@ body {
   height: 40px;
   margin-left: 20px;
   background: var(--cor-separador);
+}
+
+/*************************************** GIRO GRÁTIS ***************************************/
+
+.giro-gratis {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+  gap: 100px;
+}
+
+.giro-gratis img[src$="giro-1.svg"] {
+  width: 90px;
+}
+
+.giro-gratis img[src$="giro-2.svg"] {
+  width: 70px;
+}
+
+.giro-gratis-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  h2 {
+    color: var(--cor-w);
+    font: 600 1.5rem/1.5 var(--fonte-primaria);
+    text-transform: uppercase;
+  }
+}
+
+.giro-gratis-conteudo div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.giro-gratis-conteudo div a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font: 600 1.25rem/1.5 var(--fonte-primaria);
+  text-transform: uppercase;
+}
+
+.giro-gratis-conteudo div a:nth-child(1) {
+  color: var(--cor-w);
+}
+
+.giro-gratis-conteudo div a:nth-child(2) {
+  border: 2px solid var(--cor-4);
+  color: var(--cor-2);
+}
+
+.giro-gratis-conteudo div a::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 22px;
+  background: no-repeat center center;
+}
+
+.giro-gratis-conteudo div a:nth-child(1)::before {
+  background-image: url(../imgs/icons/icon-roleta-w.svg);
+}
+
+
+.giro-gratis-conteudo div a:nth-child(2)::before {
+  background-image: url(../imgs/icons/icon-roleta-2.svg);
+}
+
+/*************************************** MEDIA QUERIES ***************************************/
+
+@media (max-width: 1600px) {
+  .header {
+    gap: 20px;
+  }
+  .header-nav {
+    justify-content: end;
+  }
+  .header-pages {
+    display: none;
+  }
+  .container {
+    margin-left: 40px;
+  }
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .aside {
+    display: none;
+  }
+  .cadastro-conteudo {
+    h2 {
+      font: 600 1.5rem/1.66 var(--fonte-primaria);
+    }
+    p {
+      font: 400 1rem/1.33 var(--fonte-secundaria);
+    }
+    .cadastro-btn {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  .cadastro-img {
+    img {
+      width: 400px;
+    }
+  }
+  .giro-gratis img{
+    display: none;
+  }
+  .giro-gratis-conteudo div a {
+    font: 600 1rem/1.2 var(--fonte-primaria)
+  }
+}
+
+@media (max-width: 900px) {
+  .cadastro-img {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .bg-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .header-login a:nth-child(2) {
+    font-size: .875rem;
+  }
+  .cadastro-conteudo {
+    div {
+      justify-content: center;
+    }
+  }
+  .ganhar-pontos-conteudo {
+    h2 {
+      font: 600 1.5rem/1.66 var(--fonte-primaria);
+    }
+  }
+  .ganhar-pontos-img img {
+    display: none;
+  }
+  .resgate-premios-img {
+    display: none;
+  }
+  .proximo-circuito h2 {
+    font: 600 1rem/1.5 var(--fonte-primaria);
+  }
+
+  .proximo-circuito-conteudo div h3 {
+    font: 600 1rem/1.5 var(--fonte-primaria);
+
+  }
+  .giro-gratis-conteudo {
+    h2 {
+      font: 600 1rem/1.5 var(--fonte-primaria);
+    }
+    div {
+      gap: 12px;
+    }
+  }
+  .giro-gratis-conteudo div a::before {
+    display: none;
+  }
 }
