@@ -6,5 +6,4 @@ function clickMenu() {
   } else {
     aside.style.display = 'block';
   }
-
 }

@@ -1,0 +1,148 @@
+:root{
+	--color-10: #081122;
+	--color-9: #112233;
+	--color-8: #15293D;
+	--color-7: #22374D;
+	--color-5: #596E84;
+	--color-2: #C4CED9;
+	--color-white: #fff;
+}
+
+.main-spin{
+	position: relative;
+	top: 120px;
+	display: flex;
+	flex-direction: column;
+	gap: 10vh;
+}
+
+.spin-text h2,
+.spin-text p{
+	color: white;
+}
+
+.spin-text img {
+	width: 20px;
+}
+
+.spin-wheel{
+	margin-left: -366px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: var(--color-9);
+}
+
+.spin-container{
+	height: 500px;
+	width: 500px;
+	background: var(--color-7);
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	/* box-shadow: 0 0 10px var(); */
+	transition: 3s all;
+	border: 3px solid var(--color-10) ;
+}
+
+.spin-container div{
+	height: 50%;
+	width: 300px;
+	clip-path: polygon(100% 0,50% 100%, 0 0);
+	transform: translateX(-50%);
+	transform-origin: bottom;
+	position: absolute;
+	left: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	color: var(--color-white); 
+	writing-mode: vertical-rl;
+}
+
+.spin-container img {
+	width: 20px;
+	margin-top: 5px;
+}
+
+.spin-container .one{
+	background: var(--color-7);
+	left: 50%;
+}
+
+.spin-container .two{
+	background: var(--color-5);
+	transform: rotate(60deg);
+}
+
+.spin-container .three{
+	background: var(--color-7);
+	transform: rotate(120deg);
+}
+
+.spin-container .four{
+	background: var(--color-5);
+	transform: rotate(180deg);
+}
+
+.spin-container .five{
+	background: var(--color-7);
+	transform: rotate(240deg);
+}
+
+.spin-container .six{
+	background: var(--color-5);
+	transform: rotate(300deg);
+}
+
+
+.mid{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	position: absolute;
+	background: var(--color-8);
+	background-image: url(../imgs/logo.svg);
+	background-position: center;
+	background-size: 30px;
+	background-repeat: no-repeat;
+}
+
+#spin{
+	height: 60px;
+	width: 200px;
+	background: var(--color-7);
+	position: absolute;
+	margin-top: 600px;
+	font-size: 1em;
+	color: var(--color-white);
+	font-weight: 1000;
+	cursor: pointer;
+	border: none;
+	transition: .3s;
+}
+
+#spin:hover{
+	border: 1px solid var(--color-white);
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+#result{
+	position: absolute;
+	margin-top: 700px;
+	font-size: 1em;
+	color: var(--color-white);
+    text-align: center;
+}
+
+.stoper{
+	height: 50px;
+	width: 40px;
+	background: var(--color-2);
+	position: absolute;
+	clip-path: polygon(100% 0,50% 100%, 0 0);
+	margin-top: -500px;
+}

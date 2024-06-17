@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE Choices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/roleta.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-logo-menu">
+            <img id="menu" class="menu" src="../imgs/icons/menu.svg" alt="menu hamburguer" onclick="clickMenu()">
+            <a class="logo" href="../index.html"><img src="../imgs/logo.svg" alt="FE Choices"></a>
+        </div>
+        <div class="header-nav">
+            <div class="header-pages">
+                <a href="../palpites.html">Palpites</a>
+                <a href="../fantasy.html">Fantasy</a>
+                <a href="../pages/roleta.html">Roleta</a>
+            </div>
+            <div class="header-login">
+                <a href="../login.html">Entrar</a>
+                <a href="../cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+    </header>
+
+    <aside class="aside" id="aside">
+        <a class="link-obter" href="./index.html">Ganhe 20</a>
+        <nav>
+            <p>Populares</p>
+            <ul>
+                <li><a href="./palpites.html">Palpites</a></li>
+                <li><a href="./roleta.html">Roleta</a></li>
+                <li><a href="./fantasy.html">Fantasy</a></li>
+                <li><a href="./aovivo.html">Ao Vivo</a></li>
+                <li><a href="./circuitos.html">Circuitos</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="./sobre.html">Sobre Nós</a></li>
+                <li><a href="./afiliados.html">Afiliados</a></li>
+                <li><a href="./premios.html">Prêmios</a></li>
+                <li><a href="./suporte.html">Suporte</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-spin container">
+        <div class="spin-text">
+            <h2>ROLETA DIÁRIA</h2>
+            <p>Gire sua roleta diária e tenha chance de ganhar</p>
+        </div>
+        
+        <section class="spin-wheel">
+            <div class="spin-container">
+                <div class="one">10 <img src="../imgs/icons/icon-pontos.svg"></div>
+                <div class="two">Palpites grátis</div>
+                <div class="three">Sem recompensa</div>
+                <div class="four">20<img src="../imgs/icons/icon-pontos.svg"></div>
+                <div class="five">15<img src="../imgs/icons/icon-pontos.svg"></div>
+                <div class="six">Sem recompensa</div>
+            </div>
+            <span class="mid"></span>
+            <button id="spin">GIRAR ROLETA</button>
+            <div class="stoper"></div>
+            <!-- <div id="result">Result: </div> -->
+        </section>
+    </main>
+    <script src="../js/script.js"></script>
+    <script src="../js/roleta.js"></script>
+</body>
+
+</html>
