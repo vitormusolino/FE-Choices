@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/roleta.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-logo-menu">
@@ -53,21 +55,29 @@
         </nav>
     </aside>
 
-    <main class="spin-wheel">
-        <div class="spin-container">
-            <div class="one">10 <img src="../imgs/icons/icon-pontos.svg"></div>
-            <div class="two">Palpites grátis</div>
-            <div class="three">Sem recompensa</div>
-            <div class="four">20<img src="../imgs/icons/icon-pontos.svg"></div>
-            <div class="five">15<img src="../imgs/icons/icon-pontos.svg"></div>
-            <div class="six">Sem recompensa</div>
+    <main class="main-spin container">
+        <div class="spin-text">
+            <h2>ROLETA DIÁRIA</h2>
+            <p>Gire sua roleta diária e tenha chance de ganhar</p>
         </div>
+        
+        <section class="spin-wheel">
+            <div class="spin-container">
+                <div class="one">10 <img src="../imgs/icons/icon-pontos.svg"></div>
+                <div class="two">Palpites grátis</div>
+                <div class="three">Sem recompensa</div>
+                <div class="four">20<img src="../imgs/icons/icon-pontos.svg"></div>
+                <div class="five">15<img src="../imgs/icons/icon-pontos.svg"></div>
+                <div class="six">Sem recompensa</div>
+            </div>
             <span class="mid"></span>
             <button id="spin">GIRAR ROLETA</button>
             <div class="stoper"></div>
             <!-- <div id="result">Result: </div> -->
-    </main>     
-
+        </section>
+    </main>
     <script src="../js/script.js"></script>
+    <script src="../js/roleta.js"></script>
 </body>
+
 </html>
